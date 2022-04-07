@@ -7,6 +7,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import controller.ClassController;
+
 import java.awt.GridLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -51,13 +54,12 @@ public class ClassView extends JFrame{
 		setContentPane(StartWindow);
 		StartWindow.setLayout(null);
 		
-		progressBar = new JProgressBar();
-		progressBar.setFont(new Font("Lucida Grande", Font.BOLD, 14));
-		progressBar.setForeground(Color.RED);
-		progressBar.setStringPainted(true);
+		progressBar = new JProgressBar(0,100);
 		progressBar.setValue(0);
-		progressBar.setToolTipText("");
-		progressBar.setBounds(103, 185, 228, 29);
+		progressBar.setStringPainted(true);
+		progressBar.setForeground(Color.RED);
+		progressBar.setBounds(103, 185, 200, 20);
+		progressBar.setValue(0);
 		StartWindow.add(progressBar);
 		
 		lblNameGame = new JLabel("Formula 1");
@@ -76,10 +78,12 @@ public class ClassView extends JFrame{
 		btnGoWindowTwo.setVisible(false);
 		
 		this.setVisible(true);
-
-		
 	}
 
+	public void setAscoltatore(ClassController c) {
+	btnStartGame.addActionListener(c);	
+	}
+	
 	public JButton getBtnStartGame() {
 		return btnStartGame;
 	}
@@ -89,11 +93,12 @@ public class ClassView extends JFrame{
 	public JButton getBtnGoWindowTwo() {
 		return btnGoWindowTwo;
 	}
+	
 	public void caricamento() {
-		int progresso = 1;
-		while(progresso <= 100) {
+		int progresso = 1 ;
+		while(progresso<=100)
+		{
 			progressBar.setValue(progresso);
-			this.repaint();
 			progresso++;
 			try {
 				Thread.sleep(50);
@@ -102,6 +107,7 @@ public class ClassView extends JFrame{
 				e.printStackTrace();
 			}
 		}
+			
 	}
 
 }

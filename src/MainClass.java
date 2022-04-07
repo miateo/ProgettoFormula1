@@ -1,9 +1,10 @@
 import model.ClassModel;
+import view.ClassView;
 
 public class MainClass {
 
 	public static void main(String[] args) {
-		ClassModel m = new ClassModel();
+		ClassView v = new ClassView();
 
 	}
 

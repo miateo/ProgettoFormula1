@@ -13,11 +13,16 @@ public class ClassController implements ActionListener{
 	public ClassController(ClassModel model, ClassView view) {
 		this.model = model;
 		this.view = view;
+		view.getBtnStartGame().addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		if(e.getSource() == view.getBtnStartGame()) {
+			view.getBtnStartGame().setVisible(false);
+			view.getProgressBar().setVisible(false);
+			view.progressBar();
+		}
 	}
 }

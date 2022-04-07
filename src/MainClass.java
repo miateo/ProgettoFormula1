@@ -5,8 +5,9 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		ClassModel model = new ClassModel();
 		ClassView view = new ClassView();
-		ClassController controller = new Controller();
+		ClassController controller = new ClassController(model, view);
 
 	}
 

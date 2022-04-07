@@ -20,9 +20,13 @@ public class ClassController implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource() == view.getBtnStartGame()) {
-			view.getBtnStartGame().setVisible(false);
-			view.getProgressBar().setVisible(false);
-			view.progressBar();
+			/*view.getBtnStartGame().setVisible(false);
+			view.getProgressBar().setVisible(true);*/
+			view.caricamento();
+			/*if(view.getProgressBar().getValue() == 100) {
+				view.getProgressBar().setVisible(false);
+				view.getBtnGoWindowTwo().setVisible(true);
+			}*/
 		}
 	}
 }

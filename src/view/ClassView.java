@@ -3,6 +3,7 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -16,22 +17,18 @@ import java.awt.GridBagConstraints;
 
 public class ClassView extends JFrame {
 
-	private JPanel StartWindow;
-
-	/**
-	 * Launch the application.
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ClassView frame = new ClassView();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	private static ImgLibrary map = null;
+	private static ImgLibrary getMap() {
+		if(map==null) {
+			map = new ImgLibrary();
+		}
+		return map;
 	}
+	
+	private JPanel StartWindow;
+	
+	
+	private JPanel contentPane;
 
 	/**
 	 * Create the frame.
@@ -39,6 +36,7 @@ public class ClassView extends JFrame {
 	public ClassView() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+
 		StartWindow = new JPanel();
 		StartWindow.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(StartWindow);
@@ -50,6 +48,12 @@ public class ClassView extends JFrame {
 		StartWindow.add(progressBar);
 		
 		this.setVisible(true);
+
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
 	}
 
 }

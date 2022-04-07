@@ -3,6 +3,7 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -27,6 +28,16 @@ public class ClassView extends JFrame{
 	private JButton btnStartGame;
 	private JButton btnGoWindowTwo;
 
+	private static ImgLibrary map = null;
+	private static ImgLibrary getMap() {
+		if(map==null) {
+			map = new ImgLibrary();
+		}
+		return map;
+	}
+	
+
+
 	/**
 	 * Create the frame.
 	 */
@@ -34,6 +45,7 @@ public class ClassView extends JFrame{
 		setTitle("Formula 1");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+
 		StartWindow = new JPanel();
 		StartWindow.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(StartWindow);
@@ -64,6 +76,8 @@ public class ClassView extends JFrame{
 		btnGoWindowTwo.setVisible(false);
 		
 		this.setVisible(true);
+
+		
 	}
 
 	public JButton getBtnStartGame() {

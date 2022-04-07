@@ -13,6 +13,8 @@ public class ImgLibrary {
 	public ImgLibrary() {
 		try {
 			library = new HashMap();
+			
+			//piloti
 			library.put("albon",new ImageIcon(ImageIO.read(new File("assets/imgPiloti/Albon.png"))));
 			library.put("latifi",new ImageIcon(ImageIO.read(new File("assets/imgPiloti/Latifi.png"))));
 			library.put("sainz",new ImageIcon(ImageIO.read(new File("assets/imgPiloti/Sainz.png"))));
@@ -33,6 +35,21 @@ public class ImgLibrary {
 			library.put("riciardo",new ImageIcon(ImageIO.read(new File("assets/imgPiloti/Riciardo.png"))));
 			library.put("stroll",new ImageIcon(ImageIO.read(new File("assets/imgPiloti/Stroll.png"))));
 			library.put("vettel",new ImageIcon(ImageIO.read(new File("assets/imgPiloti/Vettel.png"))));
+			
+			// scuderie
+			library.put("ferrari",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/Ferrari.png"))));
+			library.put("mercedes",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/Mercedes.png"))));
+			library.put("redbull",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/Redbull.png"))));
+			library.put("haas",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/Haas.png"))));
+			library.put("alpine",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/Alpine.png"))));
+			library.put("alfaromeo",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/AlfaRomeo.png"))));
+			library.put("mclaren",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/Mclaren.png"))));
+			library.put("astonmartin",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/AstonMartin.png"))));
+			library.put("alphatauri",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/AlphaTauri.png"))));
+			library.put("williams",new ImageIcon(ImageIO.read(new File("assets/imgScuderie/Williams.png"))));
+			
+			//others
+			library.put("logo",new ImageIcon(ImageIO.read(new File("assets/imgOthers/logo.png"))));
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

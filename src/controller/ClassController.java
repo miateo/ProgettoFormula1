@@ -22,7 +22,7 @@ public class ClassController implements ActionListener{
 		if(e.getSource() == view.getBtnStartGame()) {
 			/*view.getBtnStartGame().setVisible(false);
 			view.getProgressBar().setVisible(true);*/
-			view.caricamento();
+			view.getC().start();
 			/*if(view.getProgressBar().getValue() == 100) {
 				view.getProgressBar().setVisible(false);
 				view.getBtnGoWindowTwo().setVisible(true);

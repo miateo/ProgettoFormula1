@@ -30,6 +30,7 @@ public class ClassView extends JFrame{
 	private JLabel lblNameGame;
 	private JButton btnStartGame;
 	private JButton btnGoWindowTwo;
+	private Caricamento c;
 
 	private static ImgLibrary map = null;
 	private static ImgLibrary getMap() {
@@ -94,20 +95,23 @@ public class ClassView extends JFrame{
 		return btnGoWindowTwo;
 	}
 	
-	public void caricamento() {
-		int progresso = 1 ;
-		while(progresso<=100)
-		{
-			progressBar.setValue(progresso);
-			progresso++;
-			try {
-				Thread.sleep(50);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+	public class Caricamento extends Thread{
+		public void run() {
+			for(int i=0;i<=100;i++) {
+				
+				progressBar.setValue(i);
+				try {
+					Thread.sleep(50);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
-			
+	}
+
+	public Caricamento getC() {
+		return c = new Caricamento();
 	}
 
 }

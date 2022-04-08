@@ -27,7 +27,7 @@ public class ClassView extends JFrame{
 
 	private JPanel StartWindow;
 	private JProgressBar progressBar;
-	private JLabel lblNameGame;
+	private JLabel lblTitolo;
 	private JButton btnStartGame;
 	private JButton btnGoWindowTwo;
 	private Caricamento c;
@@ -59,15 +59,16 @@ public class ClassView extends JFrame{
 		progressBar.setValue(0);
 		progressBar.setStringPainted(true);
 		progressBar.setForeground(Color.RED);
-		progressBar.setBounds(103, 185, 200, 20);
+		progressBar.setBounds(131, 193, 200, 20);
 		progressBar.setValue(0);
 		StartWindow.add(progressBar);
 		
-		lblNameGame = new JLabel("Formula 1");
-		lblNameGame.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNameGame.setFont(new Font("Impact", Font.BOLD, 30));
-		lblNameGame.setBounds(103, 43, 228, 53);
-		StartWindow.add(lblNameGame);
+		lblTitolo = new JLabel("");
+		lblTitolo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitolo.setFont(new Font("Impact", Font.BOLD, 30));
+		lblTitolo.setBounds(103, 43, 220, 50);
+		lblTitolo.setIcon(getMap().getImg("logo"));
+		StartWindow.add(lblTitolo);
 		
 		btnStartGame = new JButton("Play");
 		btnStartGame.setBounds(178, 144, 83, 29);
@@ -82,15 +83,13 @@ public class ClassView extends JFrame{
 	}
 
 	public void setAscoltatore(ClassController c) {
-	btnStartGame.addActionListener(c);	
+		btnStartGame.addActionListener(c);	
 	}
 	
 	public JButton getBtnStartGame() {
 		return btnStartGame;
 	}
-	public JProgressBar getProgressBar() {
-		return progressBar;
-	}
+	
 	public JButton getBtnGoWindowTwo() {
 		return btnGoWindowTwo;
 	}
@@ -101,7 +100,7 @@ public class ClassView extends JFrame{
 				
 				progressBar.setValue(i);
 				try {
-					Thread.sleep(50);
+					Thread.sleep(25);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

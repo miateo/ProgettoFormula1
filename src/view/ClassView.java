@@ -103,6 +103,7 @@ public class ClassView extends JFrame{
 					e.printStackTrace();
 				}
 			}
+			launchWindowstwo();
 		}
 	}
 
@@ -118,6 +119,7 @@ public class ClassView extends JFrame{
 		windowTwo.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(windowTwo);
 		windowTwo.setLayout(null);
+		windowTwo.setVisible(true);
 	}
 
 }

@@ -23,7 +23,6 @@ public class ClassController implements ActionListener{
 			view.getBtnStartGame().setVisible(false);
 			view.getProgressBar().setVisible(true);
 			view.getC().start();
-			
 		}
 	}
 }

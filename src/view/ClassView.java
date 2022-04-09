@@ -30,7 +30,6 @@ public class ClassView extends JFrame{
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
 	private JButton btnGoWindowTwo;
-	private Caricamento c;
 
 	private static ImgLibrary map = null;
 	private static ImgLibrary getMap() {
@@ -110,7 +109,7 @@ public class ClassView extends JFrame{
 	}
 
 	public Caricamento getC() {
-		return c = new Caricamento();
+		return new Caricamento();
 	}
 
 }

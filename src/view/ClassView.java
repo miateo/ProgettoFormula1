@@ -26,6 +26,7 @@ import java.awt.Color;
 public class ClassView extends JFrame{
 
 	private JPanel StartWindow;
+	private JPanel windowTwo;
 	private JProgressBar progressBar;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
@@ -110,6 +111,16 @@ public class ClassView extends JFrame{
 
 	public Caricamento getC() {
 		return new Caricamento();
+	}
+	
+	public void launchWindowstwo() {
+		
+		StartWindow.setVisible(false);
+		
+		windowTwo = new JPanel();
+		windowTwo.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(windowTwo);
+		windowTwo.setLayout(null);
 	}
 
 }

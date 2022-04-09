@@ -56,26 +56,27 @@ public class ClassView extends JFrame{
 		StartWindow.setLayout(null);
 		
 		progressBar = new JProgressBar(0,100);
+		progressBar.setVisible(false);
 		progressBar.setValue(0);
 		progressBar.setStringPainted(true);
 		progressBar.setForeground(Color.RED);
-		progressBar.setBounds(131, 193, 200, 20);
+		progressBar.setBounds(123, 193, 200, 20);
 		progressBar.setValue(0);
 		StartWindow.add(progressBar);
 		
 		lblTitolo = new JLabel("");
 		lblTitolo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitolo.setFont(new Font("Impact", Font.BOLD, 30));
-		lblTitolo.setBounds(103, 43, 220, 50);
+		lblTitolo.setBounds(104, 43, 220, 50);
 		lblTitolo.setIcon(getMap().getImg("logo"));
 		StartWindow.add(lblTitolo);
 		
 		btnStartGame = new JButton("Play");
-		btnStartGame.setBounds(178, 144, 83, 29);
+		btnStartGame.setBounds(185, 152, 83, 29);
 		StartWindow.add(btnStartGame);
 		
 		btnGoWindowTwo = new JButton("Continue");
-		btnGoWindowTwo.setBounds(178, 144, 83, 29);
+		btnGoWindowTwo.setBounds(185, 225, 83, 29);
 		StartWindow.add(btnGoWindowTwo);
 		btnGoWindowTwo.setVisible(false);
 		
@@ -94,6 +95,12 @@ public class ClassView extends JFrame{
 		return btnGoWindowTwo;
 	}
 	
+	public JProgressBar getProgressBar() {
+		return progressBar;
+	}
+
+
+
 	public class Caricamento extends Thread{
 		public void run() {
 			for(int i=0;i<=100;i++) {

@@ -121,5 +121,7 @@ public class ClassView extends JFrame{
 		windowTwo.setLayout(null);
 		windowTwo.setVisible(true);
 	}
+	
+	public void launchWindowThree() {}
 
 }

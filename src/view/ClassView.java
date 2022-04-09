@@ -30,7 +30,6 @@ public class ClassView extends JFrame{
 	private JProgressBar progressBar;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
-	private JButton btnGoWindowTwo;
 
 	private static ImgLibrary map = null;
 	private static ImgLibrary getMap() {
@@ -75,11 +74,6 @@ public class ClassView extends JFrame{
 		btnStartGame.setBounds(185, 152, 83, 29);
 		StartWindow.add(btnStartGame);
 		
-		btnGoWindowTwo = new JButton("Continue");
-		btnGoWindowTwo.setBounds(185, 225, 83, 29);
-		StartWindow.add(btnGoWindowTwo);
-		btnGoWindowTwo.setVisible(false);
-		
 		this.setVisible(true);
 	}
 
@@ -89,10 +83,6 @@ public class ClassView extends JFrame{
 	
 	public JButton getBtnStartGame() {
 		return btnStartGame;
-	}
-	
-	public JButton getBtnGoWindowTwo() {
-		return btnGoWindowTwo;
 	}
 	
 	public JProgressBar getProgressBar() {

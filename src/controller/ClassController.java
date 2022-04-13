@@ -21,8 +21,10 @@ public class ClassController implements ActionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource() == view.getBtnStartGame()) {
 			view.getBtnStartGame().setVisible(false);
-			view.getProgressBar().setVisible(true);
-			view.getC().start();
+			/*view.getProgressBar().setVisible(true);
+			view.getC().start();*/
+			view.launchWindowstwo();
+			//view.launchNextWindow(, null);
 		}
 	}
 }

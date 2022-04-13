@@ -26,7 +26,8 @@ import java.awt.Color;
 public class ClassView extends JFrame{
 
 	private JPanel StartWindow;
-	private JPanel windowTwo;
+	private nextWindow seconda;
+	private nextWindow terza;
 	private JProgressBar progressBar;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
@@ -49,10 +50,12 @@ public class ClassView extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 
+		
 		StartWindow = new JPanel();
 		StartWindow.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(StartWindow);
 		StartWindow.setLayout(null);
+		
 		
 		progressBar = new JProgressBar(0,100);
 		progressBar.setVisible(false);
@@ -73,7 +76,8 @@ public class ClassView extends JFrame{
 		btnStartGame = new JButton("Play");
 		btnStartGame.setBounds(185, 152, 83, 29);
 		StartWindow.add(btnStartGame);
-		
+
+		seconda = new nextWindow();
 		this.setVisible(true);
 	}
 
@@ -88,8 +92,18 @@ public class ClassView extends JFrame{
 	public JProgressBar getProgressBar() {
 		return progressBar;
 	}
+	
+	public JPanel getStartWindow() {
+		return StartWindow;
+	}
 
+	public nextWindow getSeconda() {
+		return seconda;
+	}
 
+	public nextWindow getTerza() {
+		return terza;
+	}
 
 	public class Caricamento extends Thread{
 		public void run() {
@@ -114,14 +128,8 @@ public class ClassView extends JFrame{
 	public void launchWindowstwo() {
 		
 		StartWindow.setVisible(false);
-		
-		windowTwo = new JPanel();
-		windowTwo.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(windowTwo);
-		windowTwo.setLayout(null);
-		windowTwo.setVisible(true);
+		setContentPane(seconda);
 	}
 	
-	public void launchWindowThree() {}
-
+	/*public void launchNextWindow(JPanel nextWindow) {}*/
 }

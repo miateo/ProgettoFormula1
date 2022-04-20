@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import model.ClassModel;
 import view.ClassView;
+import view.windowTwo;
 
 public class ClassController implements ActionListener{
 	private ClassModel model;
@@ -13,7 +14,8 @@ public class ClassController implements ActionListener{
 	public ClassController(ClassModel model, ClassView view) {
 		this.model = model;
 		this.view = view;
-		view.setAscoltatore(this);;
+		view.setAscoltatore(this);
+		view.getSeconda().setAscoltatoreW2(this);
 	}
 
 	@Override
@@ -25,6 +27,10 @@ public class ClassController implements ActionListener{
 			view.getC().start();*/
 			view.launchWindowstwo();
 			//view.launchNextWindow(, null);
+		}
+		if(e.getSource() == view.getSeconda().getBtnAdvance())
+		{
+			view.launchWindowsthree();
 		}
 	}
 }

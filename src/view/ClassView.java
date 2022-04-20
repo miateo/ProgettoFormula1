@@ -78,6 +78,8 @@ public class ClassView extends JFrame{
 		StartWindow.add(btnStartGame);
 
 		seconda = new windowTwo();
+		terza = new windowThree();
+		
 		this.setVisible(true);
 	}
 
@@ -130,6 +132,12 @@ public class ClassView extends JFrame{
 		StartWindow.setVisible(false);
 		setContentPane(seconda);
 		
+	}
+	
+	public void launchWindowsthree() {
+		
+		seconda.setVisible(false);
+		setContentPane(terza);
 	}
 	
 	/*public void launchNextWindow(JPanel nextWindow) {}*/

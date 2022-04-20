@@ -28,6 +28,7 @@ public class ClassView extends JFrame{
 	private JPanel StartWindow;
 	private windowTwo seconda;
 	private windowThree terza;
+	private windowFour quarta;
 	private JProgressBar progressBar;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
@@ -79,6 +80,7 @@ public class ClassView extends JFrame{
 
 		seconda = new windowTwo();
 		terza = new windowThree();
+		quarta = new windowFour();
 		
 		this.setVisible(true);
 	}
@@ -105,6 +107,10 @@ public class ClassView extends JFrame{
 
 	public windowThree getTerza() {
 		return terza;
+	}
+
+	public windowFour getQuarta() {
+		return quarta;
 	}
 
 	public class Caricamento extends Thread{
@@ -140,5 +146,10 @@ public class ClassView extends JFrame{
 		setContentPane(terza);
 	}
 	
-	/*public void launchNextWindow(JPanel nextWindow) {}*/
+	public void launchWindowsFour() {
+		
+		terza.setVisible(false);
+		setContentPane(quarta);
+	}
+	
 }

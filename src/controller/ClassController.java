@@ -16,6 +16,7 @@ public class ClassController implements ActionListener{
 		this.view = view;
 		view.setAscoltatore(this);
 		view.getSeconda().setAscoltatoreW2(this);
+		view.getTerza().setAscoltatoreW3(this);
 	}
 
 	@Override
@@ -26,11 +27,16 @@ public class ClassController implements ActionListener{
 			/*view.getProgressBar().setVisible(true);
 			view.getC().start();*/
 			view.launchWindowstwo();
-			//view.launchNextWindow(, null);
 		}
+		
 		if(e.getSource() == view.getSeconda().getBtnAdvance())
 		{
 			view.launchWindowsthree();
+		}
+		
+		if(e.getSource() == view.getTerza().getBtnAdvance())
+		{
+			view.launchWindowsFour();
 		}
 	}
 }

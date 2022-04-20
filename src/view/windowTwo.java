@@ -4,9 +4,9 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-public class nextWindow extends JPanel {
+public class windowTwo extends JPanel {
 
-	public nextWindow() {
+	public windowTwo() {
 		
 		setLayout(null);
 		

@@ -26,8 +26,8 @@ import java.awt.Color;
 public class ClassView extends JFrame{
 
 	private JPanel StartWindow;
-	private nextWindow seconda;
-	private nextWindow terza;
+	private windowTwo seconda;
+	private windowThree terza;
 	private JProgressBar progressBar;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
@@ -77,7 +77,7 @@ public class ClassView extends JFrame{
 		btnStartGame.setBounds(185, 152, 83, 29);
 		StartWindow.add(btnStartGame);
 
-		seconda = new nextWindow();
+		seconda = new windowTwo();
 		this.setVisible(true);
 	}
 
@@ -97,11 +97,11 @@ public class ClassView extends JFrame{
 		return StartWindow;
 	}
 
-	public nextWindow getSeconda() {
+	public windowTwo getSeconda() {
 		return seconda;
 	}
 
-	public nextWindow getTerza() {
+	public windowTwo getTerza() {
 		return terza;
 	}
 

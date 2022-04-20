@@ -129,6 +129,7 @@ public class ClassView extends JFrame{
 		
 		StartWindow.setVisible(false);
 		setContentPane(seconda);
+		
 	}
 	
 	/*public void launchNextWindow(JPanel nextWindow) {}*/

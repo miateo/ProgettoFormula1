@@ -101,7 +101,7 @@ public class ClassView extends JFrame{
 		return seconda;
 	}
 
-	public windowTwo getTerza() {
+	public windowThree getTerza() {
 		return terza;
 	}
 

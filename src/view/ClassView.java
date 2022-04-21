@@ -138,7 +138,7 @@ public class ClassView extends JFrame{
 		
 		StartWindow.setVisible(false);
 
-        this.setMinimumSize(new Dimension(700, 400));
+        this.setMinimumSize(new Dimension(800, 400));
 		setContentPane(seconda);
 		
 	}

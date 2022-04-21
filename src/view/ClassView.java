@@ -22,6 +22,7 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Dimension;
 
 public class ClassView extends JFrame{
 
@@ -136,6 +137,8 @@ public class ClassView extends JFrame{
 	public void launchWindowstwo() {
 		
 		StartWindow.setVisible(false);
+
+        this.setMinimumSize(new Dimension(700, 400));
 		setContentPane(seconda);
 		
 	}

@@ -21,7 +21,7 @@ public class windowTwo extends JPanel {
 		add(btnAdvance);
 		
 		JLabel lblCar = new JLabel("New label");
-		lblCar.setBounds(29, 46, 400, 125);
+		lblCar.setBounds(29, 46, 658, 195);
 		lblCar.setIcon(ClassView.getMap().getImg("mclaren"));
 		add(lblCar);
 		

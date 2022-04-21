@@ -34,7 +34,7 @@ public class ClassView extends JFrame{
 	private JButton btnStartGame;
 
 	private static ImgLibrary map = null;
-	private static ImgLibrary getMap() {
+	protected static ImgLibrary getMap() {
 		if(map==null) {
 			map = new ImgLibrary();
 		}

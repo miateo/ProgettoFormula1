@@ -6,6 +6,7 @@ import controller.ClassController;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JSpinner;
 
 public class windowTwo extends JPanel {
 
@@ -15,13 +16,14 @@ public class windowTwo extends JPanel {
 		
 		setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Seconda finestra");
-		lblNewLabel.setBounds(97, 74, 131, 16);
-		add(lblNewLabel);
-		
 		btnAdvance = new JButton("continua");
 		btnAdvance.setBounds(330, 251, 85, 21);
 		add(btnAdvance);
+		
+		JLabel lblCar = new JLabel("New label");
+		lblCar.setBounds(29, 46, 400, 125);
+		lblCar.setIcon(ClassView.getMap().getImg("mclaren"));
+		add(lblCar);
 		
 	}
 	
@@ -32,6 +34,4 @@ public class windowTwo extends JPanel {
 	public JButton getBtnAdvance() {
 		return btnAdvance;
 	}
-	
-	
 }

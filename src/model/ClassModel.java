@@ -2,7 +2,14 @@ package model;
 
 public class ClassModel {
 	
-	//scelta pilota e scuderia
-	
+	private String scuderia;
+
+	public String getScuderia() {
+		return scuderia;
+	}
+
+	public void setScuderia(String scuderia) {
+		this.scuderia = scuderia;
+	}
 
 }

@@ -45,36 +45,44 @@ public class ClassController implements ActionListener, ListSelectionListener{
 
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
-		System.out.println("entratot");
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(0)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Ferrari") {
+			model.setScuderia("Ferrari");
 			view.getSeconda().setIconCar(0);
-			System.out.println("ferari");
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(1)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Mercedes") {
+			model.setScuderia("Mercedes");
 			view.getSeconda().setIconCar(1);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(2)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Redbull") {
+			model.setScuderia("Redbull");
 			view.getSeconda().setIconCar(2);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(3)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "AlfaRomeo") {
+			model.setScuderia("AlfaRomeo");
 			view.getSeconda().setIconCar(3);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(4)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Haas") {
+			model.setScuderia("Haas");
 			view.getSeconda().setIconCar(4);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(5)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Alpine") {
+			model.setScuderia("Alpine");
 			view.getSeconda().setIconCar(5);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(6)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "AlphaTauri") {
+			model.setScuderia("AlphaTauri");
 			view.getSeconda().setIconCar(6);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(7)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Mclaren") {
+			model.setScuderia("Mclaren");
 			view.getSeconda().setIconCar(7);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(8)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Williams") {
+			model.setScuderia("Williams");
 			view.getSeconda().setIconCar(8);
 		}
-		if(e.getSource() == view.getSeconda().getListaScuderie().getModel().getElementAt(9)) {
+		if(view.getSeconda().getListaScuderie().getSelectedValue() == "AstonMartin") {
+			model.setScuderia("AstonMartin");
 			view.getSeconda().setIconCar(9);
 		}
 	}

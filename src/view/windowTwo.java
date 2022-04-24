@@ -32,16 +32,8 @@ public class windowTwo extends JPanel {
 		lblCar.setBounds(148, 48, 658, 195);
 		add(lblCar);
 		
-		listaScuderie = new JList();
-		listaScuderie.setModel(new AbstractListModel() {
-			String[] values = new String[] {"Ferrari", "Mercedes", "Redbull", "AlfaRomeo", "Haas", "Alpine", "AlphaTauri", "Mclaren", "Williams", "AstonMartin"};
-			public int getSize() {
-				return values.length;
-			}
-			public String getElementAt(int index) {
-				return values[index];
-			}
-		});
+		String[] scuderie = new String[] {"Ferrari", "Mercedes", "Redbull", "AlfaRomeo", "Haas", "Alpine", "AlphaTauri", "Mclaren", "Williams", "AstonMartin"};
+		listaScuderie = new JList(scuderie);
 		listaScuderie.setBounds(10, 75, 100, 186);
 		add(listaScuderie);
 		
@@ -76,31 +68,40 @@ public class windowTwo extends JPanel {
 			this.repaint();
 			break;
 		case 1:
-					
+			lblCar.setIcon(ClassView.getMap().getImg("mercedes"));
+			this.repaint();
 				break;
 		case 2:
-			
+			lblCar.setIcon(ClassView.getMap().getImg("redbull"));
+			this.repaint();
 			break;
 		case 3:
-			
+			lblCar.setIcon(ClassView.getMap().getImg("alfaromeo"));
+			this.repaint();
 			break;
 		case 4:
-			
+			lblCar.setIcon(ClassView.getMap().getImg("haas"));
+			this.repaint();
 			break;
 		case 5:
-			
+			lblCar.setIcon(ClassView.getMap().getImg("alpine"));
+			this.repaint();
 			break;
 		case 6:
-			
+			lblCar.setIcon(ClassView.getMap().getImg("alphatauri"));
+			this.repaint();
 			break;
 		case 7:
-					
+			lblCar.setIcon(ClassView.getMap().getImg("mclaren"));
+			this.repaint();	
 				break;
 		case 8:
-			
+			lblCar.setIcon(ClassView.getMap().getImg("williams"));
+			this.repaint();
 			break;
 		case 9:
-			
+			lblCar.setIcon(ClassView.getMap().getImg("astonmartin"));
+			this.repaint();
 			break;
 		}
 	}

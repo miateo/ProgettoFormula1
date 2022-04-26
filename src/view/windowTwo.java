@@ -67,44 +67,35 @@ public class windowTwo extends JPanel {
 		switch(pos) {
 		case 0:
 			lblCar.setIcon(ClassView.getMap().getImg("ferrari"));
-			this.repaint();
 			break;
 		case 1:
 			lblCar.setIcon(ClassView.getMap().getImg("mercedes"));
-			this.repaint();
-				break;
+			break;
 		case 2:
 			lblCar.setIcon(ClassView.getMap().getImg("redbull"));
-			this.repaint();
 			break;
 		case 3:
 			lblCar.setIcon(ClassView.getMap().getImg("alfaromeo"));
-			this.repaint();
 			break;
 		case 4:
 			lblCar.setIcon(ClassView.getMap().getImg("haas"));
-			this.repaint();
 			break;
 		case 5:
 			lblCar.setIcon(ClassView.getMap().getImg("alpine"));
-			this.repaint();
 			break;
 		case 6:
 			lblCar.setIcon(ClassView.getMap().getImg("alphatauri"));
-			this.repaint();
 			break;
 		case 7:
 			lblCar.setIcon(ClassView.getMap().getImg("mclaren"));
-			this.repaint();	
-				break;
+			break;
 		case 8:
 			lblCar.setIcon(ClassView.getMap().getImg("williams"));
-			this.repaint();
 			break;
 		case 9:
 			lblCar.setIcon(ClassView.getMap().getImg("astonmartin"));
-			this.repaint();
 			break;
 		}
+		this.repaint();
 	}
 }

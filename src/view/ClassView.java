@@ -146,6 +146,8 @@ public class ClassView extends JFrame{
 	public void launchWindowsthree() {
 		
 		seconda.setVisible(false);
+        this.setMinimumSize(new Dimension(500, 400));
+		this.setBounds(100, 100, 500, 300);
 		setContentPane(terza);
 	}
 	

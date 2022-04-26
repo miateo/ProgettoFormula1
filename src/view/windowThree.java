@@ -21,7 +21,7 @@ public class windowThree extends JPanel {
 		btnAdvance = new JButton("continua");
 		btnAdvance.setBounds(330, 251, 85, 21);
 		add(btnAdvance);
-		
+	
 	}
 	
 	public void setAscoltatoreW3(ClassController c) {

@@ -35,6 +35,7 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		if(e.getSource() == view.getSeconda().getBtnAdvance())
 		{
 			view.launchWindowsthree();
+			System.out.print(model.getScuderia());
 		}
 		
 		if(e.getSource() == view.getTerza().getBtnAdvance())

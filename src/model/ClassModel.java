@@ -4,6 +4,10 @@ public class ClassModel {
 	
 	private String scuderia;
 
+	public ClassModel() {
+		scuderia = "FerrariFerrari";
+	}
+	
 	public String getScuderia() {
 		return scuderia;
 	}

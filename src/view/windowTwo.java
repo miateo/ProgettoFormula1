@@ -28,13 +28,15 @@ public class windowTwo extends JPanel {
 		btnAdvance.setBounds(330, 251, 85, 21);
 		add(btnAdvance);
 		
-		lblCar = new JLabel("New label");
+		lblCar = new JLabel();
 		lblCar.setBounds(148, 48, 658, 195);
+		lblCar.setIcon(ClassView.getMap().getImg("ferrari"));
 		add(lblCar);
 		
 		String[] scuderie = new String[] {"Ferrari", "Mercedes", "Redbull", "AlfaRomeo", "Haas", "Alpine", "AlphaTauri", "Mclaren", "Williams", "AstonMartin"};
 		listaScuderie = new JList(scuderie);
 		listaScuderie.setBounds(10, 75, 100, 186);
+		listaScuderie.setSelectedIndex(0);
 		add(listaScuderie);
 		
 		txtSelezionaLaTua = new JTextField();

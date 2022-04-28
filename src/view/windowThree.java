@@ -10,6 +10,7 @@ import javax.swing.text.View;
 
 import java.awt.Color;
 import java.awt.SystemColor;
+import javax.swing.SwingConstants;
 
 public class windowThree extends JPanel {
 
@@ -22,6 +23,7 @@ public class windowThree extends JPanel {
 		setLayout(null);
 		
 		lblPilota1 = new JLabel("pilota1");
+		lblPilota1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPilota1.setBounds(10, 39, 206, 206);
 		add(lblPilota1);
 		
@@ -30,7 +32,7 @@ public class windowThree extends JPanel {
 		add(btnAdvance);
 		
 		JTextPane txtpnScegliIlTuo = new JTextPane();
-		txtpnScegliIlTuo.setBackground(SystemColor.control);
+		txtpnScegliIlTuo.setBackground(Color.WHITE);
 		txtpnScegliIlTuo.setText("Scegli il tuo pilota:");
 		txtpnScegliIlTuo.setEditable(false);
 		txtpnScegliIlTuo.setBorder(null);
@@ -38,6 +40,7 @@ public class windowThree extends JPanel {
 		add(txtpnScegliIlTuo);
 		
 		lblPilota2 = new JLabel("pilota2");
+		lblPilota2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPilota2.setBounds(226, 39, 206, 206);
 		add(lblPilota2);
 	}

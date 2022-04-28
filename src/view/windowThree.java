@@ -13,6 +13,8 @@ import java.awt.SystemColor;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import java.awt.Font;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
 
 public class windowThree extends JPanel {
 
@@ -21,8 +23,10 @@ public class windowThree extends JPanel {
 	private JButton btnAdvance;
 	private JTextPane pilota1;
 	private JTextPane pilota2;
-	
-	
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JRadioButton btnPilota2;
+	private JRadioButton btnPilota1;
+
 	public windowThree() {
 		setLayout(null);
 		
@@ -61,10 +65,21 @@ public class windowThree extends JPanel {
 		pilota2.setBackground(SystemColor.menu);
 		pilota2.setBounds(236, 255, 150, 19);
 		add(pilota2);
+		
+		btnPilota1 = new JRadioButton("");
+		btnPilota1.setSelected(true);
+		buttonGroup.add(btnPilota1);
+		btnPilota1.setBounds(67, 275, 103, 21);
+		add(btnPilota1);
+		
+		btnPilota2 = new JRadioButton("");
+		buttonGroup.add(btnPilota2);
+		btnPilota2.setBounds(261, 275, 103, 21);
+		add(btnPilota2);
 	}
 	
 	public void setAscoltatoreW3(ClassController c) {
-		btnAdvance.addActionListener(c);	
+		btnAdvance.addActionListener(c);
 	}
 	
 	public void setLblPiloti(int x) {
@@ -132,8 +147,28 @@ public class windowThree extends JPanel {
 		}
 		this.repaint();
 	}
-
+	
 	public JButton getBtnAdvance() {
 		return btnAdvance;
+	}
+	
+	public ButtonGroup getButtonGroup() {
+		return buttonGroup;
+	}
+
+	public JRadioButton getBtnPilota2() {
+		return btnPilota2;
+	}
+
+	public JRadioButton getBtnPilota1() {
+		return btnPilota1;
+	}
+
+	public JTextPane getPilota1() {
+		return pilota1;
+	}
+
+	public JTextPane getPilota2() {
+		return pilota2;
 	}
 }

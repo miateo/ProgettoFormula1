@@ -4,6 +4,7 @@ public class ClassModel {
 	
 	private String scuderia;
 	private int nscuderia;
+	private String pilota;
 
 	public ClassModel() {
 		scuderia = "Ferrari";
@@ -24,6 +25,14 @@ public class ClassModel {
 
 	public void setScuderia(String scuderia) {
 		this.scuderia = scuderia;
+	}
+
+	public String getPilota() {
+		return pilota;
+	}
+
+	public void setPilota(String pilota) {
+		this.pilota = pilota;
 	}
 
 }

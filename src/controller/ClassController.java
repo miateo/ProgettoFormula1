@@ -41,6 +41,14 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		
 		if(e.getSource() == view.getTerza().getBtnAdvance())
 		{
+			if(view.getTerza().getButtonGroup().getSelection() == view.getTerza().getBtnPilota1().getModel())
+			{
+				System.out.println(view.getTerza().getPilota1().getText());
+				model.setPilota(view.getTerza().getPilota1().getText());
+			}else {
+				System.out.println(view.getTerza().getPilota2().getText());
+				model.setPilota(view.getTerza().getPilota2().getText());
+			}
 			view.launchWindowsFour();
 		}
 	}

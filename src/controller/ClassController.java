@@ -36,7 +36,7 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		{
 			view.launchWindowsthree();
 			view.getTerza().setLblPiloti(model.getNscuderia());
-			System.out.print(model.getScuderia());
+//			System.out.print(model.getScuderia());
 		}
 		
 		if(e.getSource() == view.getTerza().getBtnAdvance())

@@ -82,7 +82,7 @@ public class ClassView extends JFrame{
 		seconda = new windowTwo();
 		terza = new windowThree();
 		quarta = new windowFour();
-		
+		this.setResizable(false);
 		this.setVisible(true);
 	}
 

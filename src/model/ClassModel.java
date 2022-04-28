@@ -6,7 +6,7 @@ public class ClassModel {
 	private int nscuderia;
 
 	public ClassModel() {
-		scuderia = "FerrariFerrari";
+		scuderia = "Ferrari";
 		nscuderia = 0;
 	}
 	

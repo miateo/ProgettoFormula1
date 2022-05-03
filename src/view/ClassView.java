@@ -1,27 +1,15 @@
 package view;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import controller.ClassController;
 
-import java.awt.GridLayout;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.BoxLayout;
-import java.awt.GridBagLayout;
-import javax.swing.JProgressBar;
-import java.awt.GridBagConstraints;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
-import java.awt.Color;
 import java.awt.Dimension;
 
 public class ClassView extends JFrame{
@@ -30,7 +18,6 @@ public class ClassView extends JFrame{
 	private windowTwo seconda;
 	private windowThree terza;
 	private windowFour quarta;
-	private JProgressBar progressBar;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
 
@@ -58,16 +45,6 @@ public class ClassView extends JFrame{
 		setContentPane(StartWindow);
 		StartWindow.setLayout(null);
 		
-		
-		progressBar = new JProgressBar(0,100);
-		progressBar.setVisible(false);
-		progressBar.setValue(0);
-		progressBar.setStringPainted(true);
-		progressBar.setForeground(Color.RED);
-		progressBar.setBounds(123, 193, 200, 20);
-		progressBar.setValue(0);
-		StartWindow.add(progressBar);
-		
 		lblTitolo = new JLabel("");
 		lblTitolo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitolo.setFont(new Font("Impact", Font.BOLD, 30));
@@ -94,10 +71,6 @@ public class ClassView extends JFrame{
 		return btnStartGame;
 	}
 	
-	public JProgressBar getProgressBar() {
-		return progressBar;
-	}
-	
 	public JPanel getStartWindow() {
 		return StartWindow;
 	}
@@ -112,26 +85,6 @@ public class ClassView extends JFrame{
 
 	public windowFour getQuarta() {
 		return quarta;
-	}
-
-	public class Caricamento extends Thread{
-		public void run() {
-			for(int i=0;i<=100;i++) {
-				
-				progressBar.setValue(i);
-				try {
-					Thread.sleep(25);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			launchWindowstwo();
-		}
-	}
-
-	public Caricamento getC() {
-		return new Caricamento();
 	}
 	
 	public void launchWindowstwo() {

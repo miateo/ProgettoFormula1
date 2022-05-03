@@ -27,8 +27,6 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		// TODO Auto-generated method stub
 		if(e.getSource() == view.getBtnStartGame()) {
 			view.getBtnStartGame().setVisible(false);
-			/*view.getProgressBar().setVisible(true);
-			view.getC().start();*/
 			view.launchWindowstwo();
 		}
 		

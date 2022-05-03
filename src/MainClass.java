@@ -10,6 +10,5 @@ public class MainClass {
 		ClassModel model = new ClassModel();
 		ClassView view = new ClassView();
 		ClassController controller = new ClassController(model, view);
-		
 	}
 }

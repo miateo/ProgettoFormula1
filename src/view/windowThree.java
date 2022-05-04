@@ -130,7 +130,7 @@ public class windowThree extends JPanel {
 				lblPilota1.setIcon(ClassView.getMap().getImg("riciardo"));
 				lblPilota2.setIcon(ClassView.getMap().getImg("norris"));
 				pilota1.setText("Daniel Ricciardo");
-				pilota2.setText("Lando Norris	");
+				pilota2.setText("Lando Norris");
 				break;
 			case 8:
 				lblPilota1.setIcon(ClassView.getMap().getImg("latifi"));

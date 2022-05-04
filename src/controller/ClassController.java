@@ -2,6 +2,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.Semaphore;
 
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -47,6 +48,42 @@ public class ClassController implements ActionListener, ListSelectionListener{
 				System.out.println(view.getTerza().getPilota2().getText());
 				model.setPilota(view.getTerza().getPilota2().getText());
 			}
+			
+			Macchina m[] = new Macchina[20];
+			Semaphore s = new Semaphore(0);
+			Classifica c = new Classifica(s);
+			
+			m[1] = new Macchina(c, "Charles Leclerc");
+			m[2] = new Macchina(c, "Carlos Sainz");
+			m[3] = new Macchina(c, "Lando Norris");
+			m[4] = new Macchina(c, "Daniel Ricciardo");
+			m[5] = new Macchina(c, "Yuki Tsunoda");
+			m[6] = new Macchina(c, "Pierre Gasly");
+			m[7] = new Macchina(c, "Max Verstappen");
+			m[8] = new Macchina(c, "Sergio Perez");
+			m[9] = new Macchina(c, "Lance Stroll");
+			m[10] = new Macchina(c, "Sebastian Vettel");
+			m[11] = new Macchina(c, "Valteri Bottas");
+			m[12] = new Macchina(c, "Guanyu Zhou");
+			m[13] = new Macchina(c, "Alexander Albon");
+			m[14] = new Macchina(c, "Nicolas Latifi");
+			m[15] = new Macchina(c, "Esteban Ocon");
+			m[16] = new Macchina(c, "Fernando Alonso");
+			m[17] = new Macchina(c, "Mick Schumacher");
+			m[18] = new Macchina(c, "Kevin Magnussen");
+			m[19] = new Macchina(c, "Lewis Hamilton");
+			m[0] = new Macchina(c, "George Russel");
+					
+			try {
+				s.acquire();
+				model.setClassifica(c);
+				//bisgona fare una pila e pushare tutto dentro per poi pullarlo fuori
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
+			
 			view.launchWindowsFour();
 		}
 	}

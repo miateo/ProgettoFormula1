@@ -5,10 +5,12 @@ public class ClassModel {
 	private String scuderia;
 	private int nscuderia;
 	private String pilota;
+	private String classifica[];
 
 	public ClassModel() {
 		scuderia = "Ferrari";
 		nscuderia = 0;
+		setClassifica(new String[20]);
 	}
 	
 	public int getNscuderia() {
@@ -33,6 +35,10 @@ public class ClassModel {
 
 	public void setPilota(String pilota) {
 		this.pilota = pilota;
+	}
+
+	public void setClassifica(String classifica[]) {
+		this.classifica = classifica;
 	}
 
 }

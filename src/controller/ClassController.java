@@ -52,6 +52,8 @@ public class ClassController implements ActionListener, ListSelectionListener{
 			Macchina m[] = new Macchina[20];
 			Semaphore s = new Semaphore(0);
 			Classifica c = new Classifica(s);
+			String[] classifica = new String[20];
+			int i = 0;
 			
 			m[1] = new Macchina(c, "Charles Leclerc");
 			m[2] = new Macchina(c, "Carlos Sainz");
@@ -73,10 +75,14 @@ public class ClassController implements ActionListener, ListSelectionListener{
 			m[18] = new Macchina(c, "Kevin Magnussen");
 			m[19] = new Macchina(c, "Lewis Hamilton");
 			m[0] = new Macchina(c, "George Russel");
-					
+			
+			while(c.isEmpty()) {
+				classifica[i++] = c.Dequeue();
+			}
+			
 			try {
 				s.acquire();
-				model.setClassifica(c);
+				model.setClassifica(classifica);
 				//bisgona fare una pila e pushare tutto dentro per poi pullarlo fuori
 			} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block

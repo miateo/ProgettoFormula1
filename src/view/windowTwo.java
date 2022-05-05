@@ -12,6 +12,7 @@ import javax.swing.AbstractListModel;
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.List;
+import javax.swing.ListSelectionModel;
 
 public class windowTwo extends JPanel {
 
@@ -35,6 +36,7 @@ public class windowTwo extends JPanel {
 		
 		String[] scuderie = new String[] {"Ferrari", "Mercedes", "Redbull", "AlfaRomeo", "Haas", "Alpine", "AlphaTauri", "Mclaren", "Williams", "AstonMartin"};
 		listaScuderie = new JList(scuderie);
+		listaScuderie.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		listaScuderie.setBounds(10, 75, 100, 186);
 		listaScuderie.setSelectedIndex(0);
 		add(listaScuderie);

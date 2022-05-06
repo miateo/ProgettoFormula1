@@ -76,23 +76,19 @@ public class ClassController implements ActionListener, ListSelectionListener{
 			m[19] = new Macchina(c, "Lewis Hamilton");
 			m[0] = new Macchina(c, "George Russel");
 			
-			while(c.isEmpty()) {
-				classifica[i++] = c.Dequeue();
-			}
-			
 			try {
 				s.acquire();
+				for(i = 0;i<20;i++) {
+					classifica [i] = c.Dequeue();
+				}
 				model.setClassifica(classifica);
-				//bisgona fare una pila e pushare tutto dentro per poi pullarlo fuori
 			} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			
 			for(int i1 = 0; i1 < classifica.length;i1++) {
-				int j = 1;
-				System.out.println(""+j+classifica[i1]);
-				j++;
+				System.out.println(""+(i1+1)+classifica[i1]);
 			}
 			view.launchWindowsFour();
 		}

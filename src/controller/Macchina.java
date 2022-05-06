@@ -19,7 +19,7 @@ public class Macchina extends Thread{
 			try {
 					Thread.sleep((int)(Math.random()*100));
 					sem.acquire();
-					classifica.Queue(x);
+					classifica.Queue(""+x);
 					sem.release();
 				} catch (InterruptedException e) {
 				// TODO Auto-generated catch block

@@ -40,5 +40,10 @@ public class ClassModel {
 	public void setClassifica(String classifica[]) {
 		this.classifica = classifica;
 	}
+	
+	/*
+	public String[] getClassifica() {
+		return this.classifica;
+	}*/
 
 }

@@ -89,7 +89,11 @@ public class ClassController implements ActionListener, ListSelectionListener{
 				e1.printStackTrace();
 			}
 			
-			
+			for(int i1 = 0; i1 < classifica.length;i1++) {
+				int j = 1;
+				System.out.println(""+j+classifica[i1]);
+				j++;
+			}
 			view.launchWindowsFour();
 		}
 	}

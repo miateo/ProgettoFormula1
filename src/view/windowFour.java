@@ -1,6 +1,5 @@
 package view;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -8,7 +7,6 @@ import javax.swing.JPanel;
 import controller.ClassController;
 
 public class windowFour extends JPanel {
-	private JPanel contentPane;
 	private JButton btnMonaco;
 	private JButton btnBritish;
 	private JButton btnGiappone;

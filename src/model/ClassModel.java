@@ -41,9 +41,8 @@ public class ClassModel {
 		this.classifica = classifica;
 	}
 	
-	/*
+	
 	public String[] getClassifica() {
-		return this.classifica;
-	}*/
-
+		return classifica;
+	}
 }

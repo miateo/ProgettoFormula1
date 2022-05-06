@@ -54,11 +54,12 @@ public class ClassController implements ActionListener, ListSelectionListener{
 			Classifica c = new Classifica(s);
 			String[] classifica = new String[20];
 			int i = 0;
+			String tmp;
 			
 			m[1] = new Macchina(c, "Charles Leclerc");
 			m[2] = new Macchina(c, "Carlos Sainz");
 			m[3] = new Macchina(c, "Lando Norris");
-			m[4] = new Macchina(c, "Daniel Ricciardo");
+			m[4] = new Macchina(c, "Daniel Riciardo");
 			m[5] = new Macchina(c, "Yuki Tsunoda");
 			m[6] = new Macchina(c, "Pierre Gasly");
 			m[7] = new Macchina(c, "Max Verstappen");
@@ -79,7 +80,12 @@ public class ClassController implements ActionListener, ListSelectionListener{
 			try {
 				s.acquire();
 				for(i = 0;i<20;i++) {
-					classifica [i] = c.Dequeue();
+					tmp = c.Dequeue();
+					classifica [i] = (i+1)+"- "+tmp;
+					if(tmp.equals(model.getPilota()))
+					{
+						classifica[i] += " (Player)"; 
+					}
 				}
 				model.setClassifica(classifica);
 			} catch (InterruptedException e1) {
@@ -87,10 +93,7 @@ public class ClassController implements ActionListener, ListSelectionListener{
 				e1.printStackTrace();
 			}
 			
-			for(int i1 = 0; i1 < classifica.length;i1++) {
-				System.out.println(""+(i1+1)+classifica[i1]);
-			}
-			view.launchWindowsFour();
+			view.launchWindowsFour(model.getClassifica());
 		}
 	}
 

@@ -17,7 +17,7 @@ public class ClassView extends JFrame{
 	private JPanel StartWindow;
 	private windowTwo seconda;
 	private windowThree terza;
-	private windowFour quarta;
+	private FinalWindow quarta;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
 
@@ -58,7 +58,6 @@ public class ClassView extends JFrame{
 
 		seconda = new windowTwo();
 		terza = new windowThree();
-		quarta = new windowFour();
 		this.setResizable(false);
 		this.setVisible(true);
 	}
@@ -83,7 +82,7 @@ public class ClassView extends JFrame{
 		return terza;
 	}
 
-	public windowFour getQuarta() {
+	public FinalWindow getQuarta() {
 		return quarta;
 	}
 	
@@ -104,9 +103,13 @@ public class ClassView extends JFrame{
 		setContentPane(terza);
 	}
 	
-	public void launchWindowsFour() {
+	public void launchWindowsFour(String[] x) {
 		
 		terza.setVisible(false);
+		quarta = new FinalWindow(x);
+        this.setMinimumSize(new Dimension(500, 475));
+		this.setBounds(100, 100, 500, 300);
+		quarta.setLblwinner(x[0].split(" ")[2].toLowerCase());
 		setContentPane(quarta);
 	}
 	

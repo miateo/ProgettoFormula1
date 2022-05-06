@@ -50,6 +50,10 @@ public class ImgLibrary {
 			
 			//others
 			library.put("logo",new ImageIcon(ImageIO.read(new File("assets/imgOthers/logo.png"))));
+			library.put("canada",new ImageIcon(ImageIO.read(new File("assets/imgOthers/Canada.png"))));
+			library.put("british",new ImageIcon(ImageIO.read(new File("assets/imgOthers/British.png"))));
+			library.put("giappone",new ImageIcon(ImageIO.read(new File("assets/imgOthers/Japan.png"))));
+			library.put("monaco",new ImageIcon(ImageIO.read(new File("assets/imgOthers/Monaco.png"))));
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

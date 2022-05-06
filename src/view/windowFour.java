@@ -1,103 +1,84 @@
 package view;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JList;
-import javax.swing.ListSelectionModel;
-import javax.swing.SwingConstants;
+
+import controller.ClassController;
 
 public class windowFour extends JPanel {
-
-	private JLabel lblClassifica;
+	private JPanel contentPane;
+	private JButton btnMonaco;
+	private JButton btnBritish;
+	private JButton btnGiappone;
+	private JButton btnCanda;
+	private JLabel lbl;
+	private JButton btnAdvance;
 	
 	public windowFour() {
 		setLayout(null);
 		
-		lblClassifica = new JLabel("CLASSIFICA GARA");
-		lblClassifica.setHorizontalAlignment(SwingConstants.CENTER);
-		lblClassifica.setBounds(61, 55, 407, 16);
-		add(lblClassifica);
+		btnCanda = new JButton("Canada");
+		btnCanda.setSelected(true);
+		btnCanda.setBounds(323, 24, 103, 21);
+		add(btnCanda);
 		
-		JLabel ClassCell1 = new JLabel("New label");
-		ClassCell1.setBounds(61, 83, 61, 16);
-		add(ClassCell1);
+		btnBritish = new JButton("G.Bretanga");
+		btnBritish.setBounds(323, 80, 103, 21);
+		add(btnBritish);
 		
-		JLabel ClassCell6 = new JLabel("New label");
-		ClassCell6.setBounds(179, 83, 61, 16);
-		add(ClassCell6);
+		btnGiappone = new JButton("Giappone");
+		btnGiappone.setBounds(323, 136, 103, 21);
+		add(btnGiappone);
 		
-		JLabel ClassCell11 = new JLabel("New label");
-		ClassCell11.setBounds(290, 83, 61, 16);
-		add(ClassCell11);
+		btnMonaco = new JButton("Monaco");
+		btnMonaco.setBounds(323, 192, 103, 21);
+		add(btnMonaco);
 		
-		JLabel ClassCell16 = new JLabel("New label");
-		ClassCell16.setBounds(407, 83, 61, 16);
-		add(ClassCell16);
+		lbl = new JLabel();
+		lbl.setBounds(10, 10, 116, 73);
+		add(lbl);
 		
-		JLabel ClassCell2 = new JLabel("New label");
-		ClassCell2.setBounds(61, 111, 61, 16);
-		add(ClassCell2);
+		btnAdvance = new JButton("Avanza");
+		btnAdvance.setBounds(323, 269, 103, 21);
+		add(btnAdvance);
+		insImg("canada");
 		
-		JLabel ClassCell7 = new JLabel("New label");
-		ClassCell7.setBounds(179, 111, 61, 16);
-		add(ClassCell7);
-		
-		JLabel ClassCell12 = new JLabel("New label");
-		ClassCell12.setBounds(290, 111, 61, 16);
-		add(ClassCell12);
-		
-		JLabel ClassCell17 = new JLabel("New label");
-		ClassCell17.setBounds(407, 111, 61, 16);
-		add(ClassCell17);
-		
-		JLabel ClassCell3 = new JLabel("New label");
-		ClassCell3.setBounds(61, 139, 61, 16);
-		add(ClassCell3);
-		
-		JLabel ClassCell8 = new JLabel("New label");
-		ClassCell8.setBounds(179, 139, 61, 16);
-		add(ClassCell8);
-		
-		JLabel ClassCell13 = new JLabel("New label");
-		ClassCell13.setBounds(290, 139, 61, 16);
-		add(ClassCell13);
-		
-		JLabel ClassCell18 = new JLabel("New label");
-		ClassCell18.setBounds(407, 139, 61, 16);
-		add(ClassCell18);
-		
-		JLabel ClassCell4 = new JLabel("New label");
-		ClassCell4.setBounds(61, 167, 61, 16);
-		add(ClassCell4);
-		
-		JLabel ClassCell9 = new JLabel("New label");
-		ClassCell9.setBounds(179, 167, 61, 16);
-		add(ClassCell9);
-		
-		JLabel ClassCell14 = new JLabel("New label");
-		ClassCell14.setBounds(290, 167, 61, 16);
-		add(ClassCell14);
-		
-		JLabel ClassCell19 = new JLabel("New label");
-		ClassCell19.setBounds(407, 167, 61, 16);
-		add(ClassCell19);
-		
-		JLabel ClassCell5 = new JLabel("New label");
-		ClassCell5.setBounds(61, 195, 61, 16);
-		add(ClassCell5);
-		
-		JLabel ClassCell10 = new JLabel("New label");
-		ClassCell10.setBounds(179, 195, 61, 16);
-		add(ClassCell10);
-		
-		JLabel ClassCell15 = new JLabel("New label");
-		ClassCell15.setBounds(290, 195, 61, 16);
-		add(ClassCell15);
-		
-		JLabel ClassCell20 = new JLabel("New label");
-		ClassCell20.setBounds(407, 195, 61, 16);
-		add(ClassCell20);
-		
-		String[] classifica = new String[] {/*getclassifca*/};
+	}
+
+	public void setAscoltatoreW4inter(ClassController c) {
+		btnAdvance.addActionListener(c);
+		btnMonaco.addActionListener(c);
+		btnBritish.addActionListener(c);
+		btnCanda.addActionListener(c);
+		btnGiappone.addActionListener(c);
+	}
+	
+	public JButton getBtnMonaco() {
+		return btnMonaco;
+	}
+
+	public JButton getBtnBritish() {
+		return btnBritish;
+	}
+
+	public JButton getBtnGiappone() {
+		return btnGiappone;
+	}
+
+	public JButton getBtnCanda() {
+		return btnCanda;
+	}
+
+	public JButton getBtnAdvance() {
+		return btnAdvance;
+	}
+
+	public void insImg(String x)
+	{
+		lbl.setIcon(ClassView.getMap().getImg(x));
+		lbl.setBounds(10, 10, ClassView.getMap().getImg(x).getIconWidth(), ClassView.getMap().getImg(x).getIconHeight());
+		this.repaint();
 	}
 }

@@ -9,7 +9,6 @@ import javax.swing.event.ListSelectionListener;
 
 import model.ClassModel;
 import view.ClassView;
-import view.windowTwo;
 
 public class ClassController implements ActionListener, ListSelectionListener{
 	private ClassModel model;
@@ -21,6 +20,7 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		view.setAscoltatore(this);
 		view.getSeconda().setAscoltatoreW2(this);
 		view.getTerza().setAscoltatoreW3(this);
+		view.getIntermedia().setAscoltatoreW4inter(this);
 	}
 
 	@Override
@@ -35,17 +35,33 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		{
 			view.launchWindowsthree();
 			view.getTerza().setLblPiloti(model.getNscuderia());
-//			System.out.print(model.getScuderia());
 		}
 		
-		if(e.getSource() == view.getTerza().getBtnAdvance())
+		if(e.getSource() == view.getIntermedia().getBtnBritish())
 		{
+			view.getIntermedia().insImg("british");
+		}
+		
+		if(e.getSource() == view.getIntermedia().getBtnCanda())
+		{
+			view.getIntermedia().insImg("canada");
+		}
+		
+		if(e.getSource() == view.getIntermedia().getBtnGiappone())
+		{
+			view.getIntermedia().insImg("giappone");
+		}
+		
+		if(e.getSource() == view.getIntermedia().getBtnMonaco())
+		{
+			view.getIntermedia().insImg("monaco");
+		}
+		
+		if(e.getSource() == view.getIntermedia().getBtnAdvance()) {
 			if(view.getTerza().getButtonGroup().getSelection() == view.getTerza().getBtnPilota1().getModel())
 			{
-				System.out.println(view.getTerza().getPilota1().getText());
 				model.setPilota(view.getTerza().getPilota1().getText());
 			}else {
-				System.out.println(view.getTerza().getPilota2().getText());
 				model.setPilota(view.getTerza().getPilota2().getText());
 			}
 			
@@ -92,8 +108,12 @@ public class ClassController implements ActionListener, ListSelectionListener{
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			
-			view.launchWindowsFour(model.getClassifica());
+			view.launchWindowsFinal(model.getClassifica());
+		}
+		
+		if(e.getSource() == view.getTerza().getBtnAdvance())
+		{
+			view.launchWindowsFour();
 		}
 	}
 

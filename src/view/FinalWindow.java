@@ -11,7 +11,8 @@ public class FinalWindow extends JPanel {
 	private JLabel lblwinner;
 
 	/**
-	 * Create the panel.
+	 * Metodo costruttore dell'ultima finestra
+	 * @param classifica l'array di piloti in ordine di arrivo
 	 */
 	public FinalWindow(String[] classifica) {
 		setLayout(null);
@@ -27,7 +28,7 @@ public class FinalWindow extends JPanel {
 		
 		JList ListClass = new JList(classifica);
 		ListClass.setEnabled(false);
-		ListClass.setBounds(20, 36, 165, 365);
+		ListClass.setBounds(20, 36, 202, 365);
 		add(ListClass);
 		
 		lblwinner = new JLabel("pilota");

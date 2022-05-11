@@ -18,14 +18,14 @@ import javax.swing.ButtonGroup;
 
 public class windowThree extends JPanel {
 
-	private JLabel lblPilota1;
-	private JLabel lblPilota2;
-	private JButton btnAdvance;
-	private JTextPane pilota1;
-	private JTextPane pilota2;
+	private JLabel lblPilota1;//Img primo pilota
+	private JLabel lblPilota2;//Img secondo pilota
+	private JButton btnAdvance;//bottone di avanzamento(finestra successiva)
+	private JTextPane pilota1;//nome primo pilota
+	private JTextPane pilota2;//nome secondo pilota
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	private JRadioButton btnPilota2;
-	private JRadioButton btnPilota1;
+	private JRadioButton btnPilota2;//selezione primo pilota
+	private JRadioButton btnPilota1;//selezione secondo pilota
 
 	public windowThree() {
 		setLayout(null);
@@ -78,10 +78,15 @@ public class windowThree extends JPanel {
 		add(btnPilota2);
 	}
 	
+	
 	public void setAscoltatoreW3(ClassController c) {
 		btnAdvance.addActionListener(c);
 	}
 	
+	/**
+	 * selezione pilota in base alla scuderia selezionata
+	 * @param x: scuderia
+	 */
 	public void setLblPiloti(int x) {
 		switch(x) {
 			case 0:

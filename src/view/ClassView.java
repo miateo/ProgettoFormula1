@@ -14,6 +14,7 @@ import java.awt.Dimension;
 
 public class ClassView extends JFrame{
 
+	
 	private JPanel StartWindow;
 	private windowTwo seconda;
 	private windowThree terza;
@@ -21,7 +22,6 @@ public class ClassView extends JFrame{
 	private FinalWindow quarta;
 	private JLabel lblTitolo;
 	private JButton btnStartGame;
-
 	private static ImgLibrary map = null;
 	protected static ImgLibrary getMap() {
 		if(map==null) {
@@ -33,7 +33,11 @@ public class ClassView extends JFrame{
 
 
 	/**
-	 * Create the frame.
+	 * @StartWindow: schermata iniziale
+	 * @seconda: shermata di selezione della scuderia
+	 * @terza: schermata di selezione del pilota
+	 * @intermedia: schermata di selezione del tracciato
+	 * @quarta: schermata in cui viene visualizzata la classifica e il vincitore
 	 */
 	public ClassView() {
 		setTitle("Formula 1");
@@ -64,6 +68,10 @@ public class ClassView extends JFrame{
 		this.setVisible(true);
 	}
 
+	/**
+	 * Impostamento degli acrionlister
+	 * @param c: Classe controller
+	 */
 	public void setAscoltatore(ClassController c) {
 		btnStartGame.addActionListener(c);	
 	}
@@ -88,6 +96,9 @@ public class ClassView extends JFrame{
 		return quarta;
 	}
 	
+	/**
+	 * avvio seconda schermata
+	 */
 	public void launchWindowstwo() {
 		
 		StartWindow.setVisible(false);
@@ -96,7 +107,10 @@ public class ClassView extends JFrame{
 		setContentPane(seconda);
 		
 	}
-	
+
+	/**
+	 * avvio @terza schermata
+	 */
 	public void launchWindowsthree() {
 		
 		seconda.setVisible(false);
@@ -104,13 +118,19 @@ public class ClassView extends JFrame{
 		this.setBounds(100, 100, 500, 300);
 		setContentPane(terza);
 	}
-	
+
+	/**
+	 * avvio @intermedia schermata
+	 */
 	public void launchWindowsFour() {
 		
 		terza.setVisible(false);
 		setContentPane(getIntermedia());
 	}
-	
+
+	/**
+	 * avvio @quarta schermata
+	 */
 	public void launchWindowsFinal(String[] x) {
 		
 		getIntermedia().setVisible(false);

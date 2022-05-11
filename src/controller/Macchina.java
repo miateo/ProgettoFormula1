@@ -13,11 +13,14 @@ public class Macchina extends Thread{
 		this.x = x;
 		this.start();
 	}
-
+	
+	/**
+	 * algoritmo nel quale la macchina simula la gara e successivamente entra nella classifica
+	 */
 	public void run()
 	{
 			try {
-					Thread.sleep((int)(Math.random()*100));
+					Thread.sleep((int)(Math.random()*100));//generazione tempo casuale
 					sem.acquire();
 					classifica.Queue(""+x);
 					sem.release();

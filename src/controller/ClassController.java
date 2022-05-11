@@ -11,8 +11,8 @@ import model.ClassModel;
 import view.ClassView;
 
 public class ClassController implements ActionListener, ListSelectionListener{
-	private ClassModel model;
-	private ClassView view;
+	private ClassModel model;//instanza del model per ricavare i dati
+	private ClassView view;//istanza della view per ricevere le interazioni e le istruzioni
 	
 	public ClassController(ClassModel model, ClassView view) {
 		this.model = model;
@@ -56,7 +56,7 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		{
 			view.getIntermedia().insImg("monaco");
 		}
-		
+		//memorizzazione del pilota 
 		if(e.getSource() == view.getIntermedia().getBtnAdvance()) {
 			if(view.getTerza().getButtonGroup().getSelection() == view.getTerza().getBtnPilota1().getModel())
 			{
@@ -117,6 +117,9 @@ public class ClassController implements ActionListener, ListSelectionListener{
 		}
 	}
 
+	/**
+	 * Salva la selezione della scuderia effettuata nella seconda finestra
+	 */
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
 		if(view.getSeconda().getListaScuderie().getSelectedValue() == "Ferrari") {

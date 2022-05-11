@@ -7,12 +7,16 @@ import javax.swing.JPanel;
 import controller.ClassController;
 
 public class windowFour extends JPanel {
+	/**
+	 * vari pulsanti per selezionare i vari tracciati
+	 */
 	private JButton btnMonaco;
 	private JButton btnBritish;
 	private JButton btnGiappone;
 	private JButton btnCanda;
+	
 	private JLabel lbl;
-	private JButton btnAdvance;
+	private JButton btnAdvance;//bottone per avanzare alla finestra successiva
 	
 	public windowFour() {
 		setLayout(null);
@@ -45,6 +49,10 @@ public class windowFour extends JPanel {
 		
 	}
 
+	/**
+	 * ascoltatore radiobutton per selezione del tracciato
+	 * @param c: controller
+	 */
 	public void setAscoltatoreW4inter(ClassController c) {
 		btnAdvance.addActionListener(c);
 		btnMonaco.addActionListener(c);
@@ -73,6 +81,10 @@ public class windowFour extends JPanel {
 		return btnAdvance;
 	}
 
+	/**
+	 * visualizzazione dei vari tracciati in base a quello selezionato
+	 * @param x: nome del tracciato
+	 */
 	public void insImg(String x)
 	{
 		lbl.setIcon(ClassView.getMap().getImg(x));

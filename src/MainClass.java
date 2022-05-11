@@ -7,8 +7,8 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ClassModel model = new ClassModel();
-		ClassView view = new ClassView();
-		ClassController controller = new ClassController(model, view);
+		ClassModel model = new ClassModel();//instanziamento model
+		ClassView view = new ClassView();//instanziamento view
+		ClassController controller = new ClassController(model, view);//instanziamento controller -> gli passo il model e la view
 	}
 }
